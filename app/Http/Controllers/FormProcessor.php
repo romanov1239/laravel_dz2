@@ -18,6 +18,6 @@ class FormProcessor extends Controller
             'last_name' => 'required',
             'email' => 'required'
         ]);
-        return response()->json($validatedData);
+        return view('user_profile', ['user' => $validatedData]);
     }
 }
